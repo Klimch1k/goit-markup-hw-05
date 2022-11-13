@@ -4,6 +4,7 @@
   --main-back-color: #ffffff;
   --accent-color: #2196f3;
   --second-back-color: #2f303a;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Глобальні стилі для баді */
@@ -56,6 +57,8 @@ img {
 }
 .link {
   text-decoration: none;
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 .list {
   list-style: none;
@@ -130,12 +133,26 @@ a {
   letter-spacing: 0.02em;
   color: var(--title-color);
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: #2196f3;
 }
 .current {
+  position: relative;
   color: var(--accent-color);
+}
+.current::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 4px;
+
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  background-color: #2196f3;
+  border-radius: 2px;
 }
 /* Телефон та мейл */
 .auth-nav {
@@ -295,6 +312,26 @@ a {
   margin-left: 30px;
 }
 
+.servises-thumb {
+  position: relative;
+}
+.servises-thumb-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-back-color);
+  background: rgba(47, 48, 58, 0.8);
+}
 .servises-title,
 .team-title,
 .clients-title {
@@ -370,6 +407,7 @@ a {
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
+  background-color: var(--main-back-color);
 }
 
 .network:hover,

@@ -57,9 +57,6 @@ img {
 }
 .link {
   text-decoration: none;
-  transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function),
-    border 250ms var(--timing-function);
 }
 .list {
   list-style: none;
@@ -125,6 +122,8 @@ a {
 }
 
 .nav-link {
+  transition: color 250ms var(--timing-function);
+
   padding-top: 21px;
   padding-bottom: 21px;
 
@@ -167,6 +166,8 @@ a {
 }
 
 .auth-link {
+  transition: color 250ms var(--timing-function);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,6 +235,8 @@ a {
   padding-left: 32px;
   padding-right: 32px;
   border-radius: 4px;
+
+  transition: background-color 250ms var(--timing-function);
 
   font-family: "Roboto", "Athelas", "Arial", sans-serif;
   font-weight: 700;
@@ -409,6 +412,9 @@ a {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition: background-color 250ms var(--timing-function);
+
   color: #afb1b8;
   background-color: var(--main-back-color);
 }
@@ -419,6 +425,7 @@ a {
 }
 .network-icon {
   fill: currentColor;
+  transition: fill 250ms var(--timing-function);
 }
 .network:focus .network-icon,
 .network:hover .network-icon {
@@ -440,6 +447,9 @@ a {
   align-items: center;
   width: 170px;
   height: 92px;
+
+  transition: color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -498,6 +508,8 @@ a {
 }
 
 .location {
+  transition: color 250ms var(--timing-function);
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
@@ -514,6 +526,7 @@ a {
 .tel-end {
   padding-top: 0px;
   padding-bottom: 0px;
+
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -569,6 +582,7 @@ a {
   color: var(--title-color);
   cursor: pointer;
   border-color: transparent;
+
   transition: background-color 250ms var(--timing-function),
     color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
@@ -598,15 +612,14 @@ a {
 }
 .portfolio-link {
   display: block;
+  transition: box-shadow 250ms var(--timing-function);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portfolio-link {
-  transition: box-shadow 250ms var(--timing-function);
-}
+
 .portfolio-link:hover .portfolio-discription,
 .portfolio-link:focus .portfolio-discription {
   transform: translateY(0);

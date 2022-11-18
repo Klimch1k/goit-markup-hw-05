@@ -623,7 +623,6 @@ a {
 .portfolio-link:hover .portfolio-discription,
 .portfolio-link:focus .portfolio-discription {
   transform: translateY(0);
-  transition: transform 250ms var(--timing-function);
 }
 
 .portfolio-thumb {
@@ -650,6 +649,7 @@ a {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 }
 
 .image-caption {
@@ -698,8 +698,7 @@ a {
   height: 100%;
 
   transform: scale(1);
-  transition: transform 250ms var(--timing-function),
-    background-color 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -708,7 +707,6 @@ a {
   opacity: 0;
   pointer-events: none;
   transform: scale(0.3);
-  background-color: rgba(0, 0, 0);
 }
 
 .modal {
